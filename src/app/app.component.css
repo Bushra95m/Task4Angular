@@ -1,0 +1,16 @@
+.form {
+    width: 500px;
+    height: 300px;
+    
+    margin-top: 30px;
+   
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #a7a7a9;
+    line-height: 20px; 
+   
+  }
+  body{
+    background-color: rgb(135, 139, 251);
+  }

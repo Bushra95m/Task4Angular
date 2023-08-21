@@ -1,0 +1,16 @@
+
+<div class="form">
+<select class="A" [(ngModel)]="selectedUser" (onChange)="onUserSelect($event)">
+    <option value="">Select a user</option>
+    <option value="1">Bushra</option>
+    <option value="2">Asma</option>
+    <option value="3">Abeer</option>
+    <option value="4">Mawaddah</option>
+    <option value="5">Reem</option>
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button  [disabled]="!isNextButtonEnabled()" routerLink="question">Next</button>
+</div>
+
+
+

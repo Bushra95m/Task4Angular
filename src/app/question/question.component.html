@@ -1,0 +1,40 @@
+
+<div class="question-container">
+  <p class="B">{{ currentQuestion.question }}</p>
+  <br>
+  <div class="A"  *ngFor="let option of currentQuestion.options; let i = index">
+    <input 
+    
+      type="radio"
+      [(ngModel)]="selectedOption"
+      [value]="option"
+      name="options"
+      id="option{{ i }}"
+      [disabled]="answers[currentQuestionIndex] !== undefined"
+    />
+    <label class="A" for="option{{ i }}">{{ option }}</label>
+  </div>
+
+<br>
+
+<div *ngIf="selectedOption">
+  <p class="correct" *ngIf="isOptionCorrect(selectedOption)">
+    Correct answer: {{ currentQuestion.answer }}
+  </p>
+  <p class="incorrect" *ngIf="!isOptionCorrect(selectedOption)">
+    Wrong answer. Try again.
+  </p>
+</div>
+<br>
+
+</div>
+<br>
+<br>
+<div class="M">
+<button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button> &nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="nextQuestion()" [disabled]="selectedOption === null || currentQuestionIndex === questions.length - 1">Next</button>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+  <button  (click)="submitQuiz()" *ngIf="currentQuestionIndex === questions.length - 1">Submit</button>
+</div>
+

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Task4Angular';
+  selectedUser: string | undefined;
+
+  onUserSelected(user: string): void {
+    this.selectedUser = user;
+  }
 }

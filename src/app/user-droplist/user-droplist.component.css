@@ -1,0 +1,27 @@
+
+.form{
+   margin-top: 200px;
+   margin-left: 700px;
+      
+
+}
+  
+  .A{
+    width: 200px;
+    height: 30px;
+    font-size: 22px;
+    text-align: center;
+    border:2px solid black;
+
+    background-color: white;
+  }
+  button{
+    border:2px solid black;
+    height: 30px;
+    width: 80px;
+    background-color: white;
+    font-weight: bold;
+    
+    
+    
+  }
